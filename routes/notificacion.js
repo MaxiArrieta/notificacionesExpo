@@ -4,12 +4,14 @@ const moment = require('moment');
 const app = express();
 const arrayNotificaciones = [];
 moment.locale('es');
-
+// let opciones = { hour: 'numeric', minute: '2-digit', hour12: false };
 // Esta funcion se ejecuta cada 30 segundas y reccore el array de notificaciones
 // las copara y quita las repetidas xq se envian push todo el timepo si hay alguna
 // repetida la saca, si todo esta ok envia la notificacion
 const sendNotificacion = () => {
-    let dia = new Date().toLocaleString('es-Ar');
+    let dia = new Date().toLocaleString('es-AR', {
+        timeZone: 'America/Buenos_Aires',
+    });
     let hora = moment(dia).format('LT');
 
     if (arrayNotificaciones.length === 0) return;
