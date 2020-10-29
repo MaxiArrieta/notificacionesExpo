@@ -9,7 +9,7 @@ moment.locale('es');
 // las copara y quita las repetidas xq se envian push todo el timepo si hay alguna
 // repetida la saca, si todo esta ok envia la notificacion
 const sendNotificacion = () => {
-    let dia = new Date();
+    let dia = new Date().toLocaleString('es-Ar');
     let hora = moment(dia).format('LT');
 
     if (arrayNotificaciones.length === 0) return;

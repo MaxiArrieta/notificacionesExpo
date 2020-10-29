@@ -1,7 +1,7 @@
 {
     "name": "maiti-backend",
     "version": "1.0.0",
-    "description": "backend para las notificaciones de maiti-app",
+    "description": "Backend para las notificaciones de maiti-app",
     "main": "app.js",
     "scripts": {
         "start": "node app.js",
